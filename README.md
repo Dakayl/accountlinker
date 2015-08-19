@@ -8,7 +8,7 @@ Please see the licence (GNU GPL 3.0).
 
 ## Current Goals
 - Account linking from Admin, Moderator or User (based upon admin choice of how to link)
-- Easy account switching through a list of links (<li><a>) or selectbox (<select><option>).
+- Easy account switching through a list of links or selectbox
 - Compatible with datas from Accounts Links 0.7.9 for 3.0.x (might be easy to switch to another form of account linking)
 - EN and FR translation.
 - Accents and quote improved compatibility.
