@@ -1,0 +1,25 @@
+services:
+    dakayl.accountlinker.controller.user:
+        class: dakayl\accountlinker\controller\user
+        arguments:
+          - @dakayl.accountlinker.repository.account
+    dakayl.accountlinker.controller.moderator:
+        class: dakayl\accountlinker\controller\moderator
+        arguments:
+          - @dakayl.accountlinker.repository.account
+    dakayl.accountlinker.controller.admin:
+        class: dakayl\accountlinker\controller\admin
+        arguments:
+          - @dakayl.accountlinker.repository.account
+    dakayl.accountlinker.repository.account:
+        class: dakayl\accountlinker\repository\accountRepository
+        arguments:
+          - @dakayl.accountlinker.table
+          - @dakayl.accountlinker.master.column
+          - @dakayl.accountlinker.target.column
+          - @dakayl.accountlinker.toShow.column
+          - @dakayl.accountlinker.toShow.pm
+          - @dakayl.accountlinker.toShow.pm.table
+          - @dakayl.accountlinker.toShow.pm.user.column
+          - @dakayl.accountlinker.toShow.pm.read.column
+          - @dakayl.accountlinker.target.column

@@ -1,0 +1,9 @@
+parameters:
+    dakayl.accountlinker.table:users
+    dakayl.accountlinker.master.column:master_id
+    dakayl.accountlinker.target.column:user_id	
+    dakayl.accountlinker.toShow.column:username
+    dakayl.accountlinker.toShow.pm:1
+    dakayl.accountlinker.toShow.pm.table:privmsgs_to
+    dakayl.accountlinker.toShow.pm.user.column:user_id
+    dakayl.accountlinker.toShow.pm.read.column:pm_unread

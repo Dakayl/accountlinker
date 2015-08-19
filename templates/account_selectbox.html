@@ -1,0 +1,13 @@
+<!-- IF not S_IS_BOT and S_USER_LOGGED_IN and S_ACCOUNT_LINK_OPTIONS -->
+	<form action="{U_ACCOUNT_LINK_SEND_TO}" method="post">
+		<select name="switch_acct" onChange="this.form.submit();">
+			<option value="">{L_SWITCH_USER}</option>
+			{S_ACCOUNT_SELECTBOX_OPTIONS}
+		</select>
+		<input type="hidden" name="redirect" value="{U_THIS_URL}" />
+		<input type="hidden" name="method" value="selectbox" />
+		<noscript>
+			<input type="submit" name="submit" value="{L_SWITCH_USER}" />
+		</noscript>
+	</form>
+<!-- ENDIF -->
