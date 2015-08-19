@@ -3,7 +3,7 @@ PHP BB 3.1.x Account Linker
 
 Created by Dakayl (french LARPer) for RPG community. Have fun guys.
 
-You are free to edit, change and improve this little mod.
+You are free to edit, contribute, change and improve this little mod.
 Please see the licence (GNU GPL 3.0).
 
 ## Current Goals
