@@ -26,12 +26,14 @@ class accountRepository {
 		$this->toShow_column = $toShow_column;		
 	}
 	
-	protected function obtain_master_id($user_id){
-	global $db;
+	protected function obtain_master_id($user_id = false)
+	{
+		global $db;
+		if(empty($user_id)) return false;
 
 		$sql = 'SELECT '.$this->master_column.' AS master_id
 			FROM ' . $this->table . '
-			WHERE '.$this->target_column.' = ' . $user_id;
+			WHERE '.$this->target_column.' = ' . $user_id.' LIMIT 1;';
 		$result = $db->sql_query($sql);
 		$user_data = $db->sql_fetchrow($result);
 		$db->sql_freeresult($result);
@@ -42,25 +44,56 @@ class accountRepository {
 	}
 	
 	
-	protected function obtain_master_linked_account($master_id)
+	protected function obtain_master_linked_account($master_id = false)
 	{
+		// To do : ajouter infos MP.
 		global $db;
-
+		if(empty($master_id)) return false;
 		$sql = 'SELECT '.$this->target_column.' AS user_id, '.$this->toShow_column.' AS username
 			FROM ' . $this->table . '
-			WHERE '.$this->master_column.' = ' . $user_id;
+			WHERE '.$this->master_column.' = ' . $master_id. ' OR 
+			'.$this->target_column.' = ' . $master_id.';';
 		$result = $db->sql_query($sql);
-		$user_data = $db->sql_fetchrow($result);
-		$db->sql_freeresult($result);
-		return $user_data;
 		
-		// To do : ajouter master et ajouter infos MP si ok.
+		$accounts = array();
+		while(($row = $db->sql_fetchrow($result)))
+		{
+			$accounts[$row['user_id'] ] = array();
+			$accounts[$row['user_id'] ]['username'] = $row['username'];
+		}
+		$db->sql_freeresult($result);
+		return $accounts;
+		
 	}
 	
-	public function obtain_linked_account($user_id){
-	
+	public function obtain_linked_account($user_id = false){
+		if(empty($user_id)) return false;
 		$master_id = $this->obtain_master_id($user_id);
 		return obtain_master_linked_account($master_id)
+	}
+	
+	protected function link_accounts($master_id, $target_id = false)
+	{
+		global $db;
+		if(empty($master_id)) return false;
+		if(empty($target_id)) return false;
+		$sql = 'UPDATE '. USERS_TABLE 
+		.' SET master_id = '. $master_id 
+		.' WHERE user_id = '. $target_id.' LIMIT 1;';
+		// Need to check for errors....
+		return $db->sql_query($sql);
+	}
+	
+	protected function unlink_account($target_id = false)
+	{
+		global $db;
+		if(empty($target_id)) return false;
+		$sql = 'UPDATE '. USERS_TABLE 
+		.' SET master_id = 0
+		WHERE user_id = '. $target_id.' LIMIT 1;';
+		// Need to check for errors....
+		$result = $db->sql_query($sql);
+		return $db->sql_query($sql);
 	}
 }
 ?>
