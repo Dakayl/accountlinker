@@ -33,6 +33,8 @@ if (empty($lang) || !is_array($lang))
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 $lang = array_merge($lang, array(
-	// ACP Module
-	'ACP_ACCOUNT_LINKER'				=> 'Lier un utilisateur',
+	'ACP_ACCOUNT_LINKER'	=> 'Lier deux comptes',
+	'ACCOUNT_LINKER'	=> 'Lier deux comptes',
+	'DIR_NOT_EXIST'		=> 'La langue % n’a pas les fichiers nécessaires pour cette extension. Afin d’utiliser cette extension, veuillez traduire les fichiers nécessaires et les envoyer dans le répertoire % de cette extension.',
+	'ADD_USER_EXPLAIN'	=> 'Lier deux comptes utilisateurs.',
 ));
