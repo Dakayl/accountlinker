@@ -36,18 +36,14 @@ class accountlinker_module
 		}
 		// include lang files we need
 		$user->add_lang(array('posting', 'ucp', 'acp/users', 'acp/groups'));
-		// add custom profile fields
-		$cp = $phpbb_container->get('profilefields.manager');
 		//set empty error strings
 		$error = $cp_data = $cp_error = array();
 		// Load a template from adm/style for our ACP page
 		$this->tpl_name = 'acp_accountlinker';
 		// Define the name of the form for use as a form key
 		add_form_key('acp_accountlinker');
-		// Try to automatically determine the timezone and daylight savings time settings
-		
-		// build an array of all lang directories for the extension and check to make sure we have the lang available that is being chosen
 
+		// build an array of all lang directories for the extension and check to make sure we have the lang available that is being chosen
 		$dir_array = $this->dir_to_array($this->phpbb_root_path .'ext/dakayl/acp_accountlinker/language');
 		if (!in_array($data['lang'], $dir_array))
 		{
