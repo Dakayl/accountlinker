@@ -2,8 +2,8 @@
 /**
  *
  * @package phpBB Extension - Account Linker
- * @author Dakayl
- * @copyright (c) 2015 Dakayl
+ * @author Dakayl (Nicolas Brouet), Drakkim (Michael Flenniken, Jr.)
+ * @copyright (c) 2015 Dakayl, Drakkim
  * @license GNU General Public License, version 3 (GPL-3.0)
  *
  */
