@@ -10,10 +10,10 @@ Please see the licence (GNU GPL 3.0).
  - List accounts correctly (through selectbox or list).
  - Switch account
  - ACP to link  / unlink
- - MCP to link / unlink
- - ACP to allow / disallow moderator linking
- - user to link / unlink
- - ACP to allow / disallow user linking
+ - MCP to see list, link / unlink
+ - ACP to allow / disallow MCP linking, listing
+ - UCP to see list, to link / unlink
+ - ACP to allow / disallow UCP linking, listing
  - ACP to show / hide Private Message visibility
  - ACP Option to auto-activate linked accounts
  - Complete EN trnaslation
