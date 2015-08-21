@@ -1,0 +1,35 @@
+<!-- INCLUDE overall_header.html -->
+
+	<h1>{L_ACCOUNT_LINKER} - {L_MOD_VERSION}</h1>
+	<p>{L_ACCOUNT_LINKER_EXPLAIN}</p>
+
+	<form id="register" method="post" autocomplete="off" action="{U_ACTION}">
+
+<!-- IF ERROR -->
+	<div class="errorbox"><h3>{L_WARNING}</h3>
+		<p>{ERROR}</p>
+	</div>
+<!-- ENDIF -->
+
+<fieldset>
+	<legend>{L_REGISTRATION}</legend>
+	<p>{L_REG_COND}</p>
+	<!-- IF ACCOUNT_TO_SEARCH -->
+	<dl>
+		<dt><label for="username">{L_USERNAME_SEARCH}</label>
+		<dd><input class="medium" type="text" id="username" name="username" size="25" maxlength="40" value="" /></dd>
+	</dl>
+	<!-- ENDIF -->
+	<!-- IF ACCOUNT_TO_LINK -->
+	<dl>
+		<dt><label for="email">{L_USERNAME_SEARCH}</label></dt>
+		<dd>{ACCOUNT_TO_LINK}</dd>
+	</dl>
+	<dl>
+		<dt><label for="username">{L_USERNAME_LINK}</label>
+		<dd><input class="medium" type="text" id="userlink" name="userlink" size="25" maxlength="40" value="" /></dd>
+	</dl>
+</fieldset>
+
+</form>
+<!-- INCLUDE overall_footer.html -->
