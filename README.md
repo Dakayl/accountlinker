@@ -2,6 +2,7 @@
 PHP BB 3.1.x Account Linker
 
 Created by Dakayl (Nicolas Brouet).
+
 Based upon Account Links 0.7.9 by Drakkim (Michael Flenniken, Jr.).
 
 Have fun guys.
