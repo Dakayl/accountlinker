@@ -1,5 +1,13 @@
 <?php
-namespace dakayl\accountlinker\controller;
+/**
+ *
+ * @package phpBB Extension - Account Linker
+ * @author Dakayl
+ * @copyright (c) 2015 Dakayl
+ * @license GNU General Public License, version 3 (GPL-3.0)
+ *
+ */
+ namespace dakayl\accountlinker\controller;
 
 use dakayl\accountlinker\repository\accountRepository;
 
