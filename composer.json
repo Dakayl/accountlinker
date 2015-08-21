@@ -1,9 +1,9 @@
 {
    "name": "dakayl/accountlinker",
    "type": "phpbb-extension",
-   "description": "Account Linking for phpBB 3.1.x & Vampire Camarilla LARP community",
+   "description": "Account Linking for phpBB 3.1.x",
    "homepage": "https://github.com/Dakayl/accountlinker",
-   "version": "0.1.0",
+   "version": "1.0.0",
    "time": "2015-08-18",
    "license": "GPL-2.0",
    "authors": [{
@@ -11,13 +11,17 @@
       "email": "nicolas.brouet84@gmail.com",
       "homepage": "https://github.com/Dakayl/",
       "role": "Lead Developer"
+   },{
+      "name": "Michael FLENNIKEN",
+      "email": "drakkim@conclavewiz.com",
+      "role": "Lead Developer"
    }],
    "require": {
       "php": ">=5.3.3",
       "composer/installers": "~1.0"
    },
    "extra": {
-      "display-name": "Dakayl PhpBB 3.1.x Account Linker",
+      "display-name": "PHPBB 3.1.x Account Linker",
       "soft-require" : {
          "phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
       }
