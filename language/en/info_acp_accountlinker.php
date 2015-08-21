@@ -34,5 +34,8 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 $lang = array_merge($lang, array(
 	// ACP Module
-	'ACP_ACCOUNT_LINKER'				=> 'Link accounts',
+	'ACP_ACCOUNT_LINKER '=> 'Link accounts',
+	'ACCOUNT_LINKER'	=> 'Link accounts',
+	'DIR_NOT_EXIST'		=> 'The language you have chosen %s does not have the files needed for the extension. Please translate them and upload to the %s directory of the extension to use the extension.',
+	'ADD_USER_EXPLAIN'	=> 'Link  two user accounts.',
 ));
