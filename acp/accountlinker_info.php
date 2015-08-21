@@ -11,7 +11,7 @@ namespace dakayl\accountlinker\acp;
 /**
 * @package module_install
 */
-class adduser_info
+class accountlinker_info
 {
 	function module()
 	{
