@@ -1,10 +1,10 @@
 # Account Linker
 PHP BB 3.1.x Account Linker
 
-Created by Dakayl (Nicolas Brouet)
-Based upon Account Links 0.7.9 by Drakkim (Michael Flenniken, Jr.)
+Created by Dakayl (Nicolas Brouet).
+Based upon Account Links 0.7.9 by Drakkim (Michael Flenniken, Jr.).
 
-. Have fun guys.
+Have fun guys.
 
 You are free to edit, contribute, change and improve this little mod.
 Please see the licence (GNU GPL 3.0).
