@@ -24,7 +24,8 @@ Please see the licence (GNU GPL 3.0).
  - Copyright stuff
  - Compiling Builds through Travis ?
  - Code quality ?
- -
+
+
 ## Current Goals
 - Account linking from Admin, Moderator or User (based upon admin choice of how to link)
 - Easy account switching through a list of links or selectbox
