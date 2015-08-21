@@ -26,9 +26,9 @@ class install_v100 extends \phpbb\db\migration\migration
 				'acp',
 				'ACP_CAT_USERS',
 				array(
-					'module_basename'	=> '\dakayl\accountlinker\acp\accountlinker_module',
-					'auth'				=> 'ext_dakayl/accountlinker && acl_a_user',
-					'modes'				=> array('main'),
+					'module_basename' => '\dakayl\accountlinker\acp\accountlinker_module',
+					'auth' => 'ext_dakayl/accountlinker && acl_a_user',
+					'modes'	=> array('main'),
 				),
 			)),
 		);
@@ -41,7 +41,7 @@ class install_v100 extends \phpbb\db\migration\migration
 				'acp',
 				'ACP_CAT_USERS',
 				array(
-					'module_basename'	=> '\dakayl\accountlinker\acp\adduser_module',
+					'module_basename' > '\dakayl\accountlinker\acp\accountlinker_module',
 				),
 			)),
 		);
